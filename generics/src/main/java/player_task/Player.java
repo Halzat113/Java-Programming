@@ -1,3 +1,5 @@
+package player_task;
+
 public abstract class Player {
 
     private String name;
@@ -12,7 +14,7 @@ public abstract class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "player_task.Player{" +
                 "name='" + name + '\'' +
                 '}';
     }

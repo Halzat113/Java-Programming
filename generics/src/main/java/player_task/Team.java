@@ -1,3 +1,5 @@
+package player_task;
+
 import java.util.ArrayList;
 
 public class Team<T extends Player> {
@@ -30,7 +32,7 @@ public class Team<T extends Player> {
 
     @Override
     public String toString() {
-        return "Team{" +
+        return "player_task.Team{" +
                 "name='" + name + '\'' +
                 ", members=" + members +
                 '}';
