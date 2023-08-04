@@ -12,7 +12,7 @@ public class Generic<T> {
 
 class Test{
     public static void main(String[] args) {
-        Generic<String> g = new Generic<>("asd");
+        Generic<Integer> g = new Generic<>(2);
         System.out.println(g.obj);
     }
 }

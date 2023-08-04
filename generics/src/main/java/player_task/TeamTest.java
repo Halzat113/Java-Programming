@@ -6,7 +6,7 @@ public class TeamTest {
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
-       // player_task.Team team1 = new player_task.Team("England");
+        //player_task.Team team1 = new player_task.Team("England");
 
         Team<SoccerPlayer> team1 = new Team<>("England");
         //player_task.Team<String> brokenTeam = new player_task.Team<>("this wont work !"); only accepts Players
