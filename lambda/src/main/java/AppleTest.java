@@ -21,6 +21,10 @@ public class AppleTest {
 
         List<Apple> greenApple = filterApples(inventory,apple -> apple.getColor().equals(Color.GREEN));
         System.out.println(greenApple);
+        System.out.println("===============Format===============");
+       prettyPrintApple(inventory,apple -> {String result = apple.getWeight()>=100?"Heavy":"Light";
+            return "A "+result+" "+apple.getColor()+" apple";});
+
     }
 
     private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate) {
@@ -34,5 +38,10 @@ public class AppleTest {
         return result;
     }
 
-
+    static void prettyPrintApple(List<Apple> inventory, AppleFormatter appleFormatter){
+        for (Apple apple : inventory) {
+            String output = appleFormatter.test(apple);
+            System.out.println(output);
+        }
+    }
 }
