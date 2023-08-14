@@ -40,7 +40,7 @@ public class ComparatorDemo {
         myInventory.sort(sortApple);
         System.out.println("myInventory = " + myInventory);
 
-        myInventory.sort(comparing((apple)->apple.getWeight()));
+        myInventory.sort(comparing(apple->apple.getWeight()));
         myInventory.sort(comparing(Apple::getWeight));
 
         //Reversed
