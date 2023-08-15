@@ -1,5 +1,4 @@
 .idea
-/generics/target/
+/*/target/
 /JavaProgramming.iml
-/lambda/target/
 /out/
