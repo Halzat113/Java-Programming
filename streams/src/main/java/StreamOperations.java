@@ -1,15 +1,10 @@
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class StreamOperations {
     public static void main(String[] args) {
 
         List<Integer> myLst = Arrays.asList(1,2,2,3,4,5,3,2,6);
-        myLst.forEach(System.out::println);
 
         //Filter
         System.out.println("***********FILTER************");
