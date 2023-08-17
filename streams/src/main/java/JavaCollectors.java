@@ -65,6 +65,40 @@ public class JavaCollectors {
                 .collect(Collectors.counting());
         System.out.println("evenCount = " + evenCount);
 
+        //summingInt(ToIntFunction) : returns a Collector that produces the sum of an integer-valued function
+        System.out.println("**********summingInt()**********");
+
+        int sum =
+        menu.stream().collect(Collectors.summingInt(Dish::getCalories));
+
+        System.out.println(sum);
+
+        //averageInt: returns the avarage of the integers passed values
+        Double calorieAvg = menu.stream()
+                .collect(Collectors.averagingInt(Dish::getCalories));
+        System.out.println(calorieAvg);
+
+        //joining(): is used to join various elements of a character or string array into a single string object
+        System.out.println("**********joining()**********");
+
+        List<String> courses = Arrays.asList("Java","JS","TS");
+        String result =courses.stream()
+                .collect(Collectors.joining(" "));
+        System.out.println(result);
+
+        //partitioningBy(): is used to partition a stream of objects(or set of elements) based on a given predicate
+        System.out.println("**********partitioningBy()**********");
+
+        Map<Boolean,List<Dish>>veggieDish = menu.stream()
+                .collect(Collectors.partitioningBy(Dish::isVegetarian));
+
+        System.out.println(veggieDish.get(true));
+
+        //groupingBy(): is used for grouping objects by some property and storing results in a map instance
+        Map<Type,List<Dish>> dishType = menu.stream()
+                .collect(Collectors.groupingBy(Dish::getType));
+        System.out.println(dishType);
+
 
     }
 }
